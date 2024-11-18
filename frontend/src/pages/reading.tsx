@@ -4,7 +4,7 @@ import TextSection from '@/components/readings/textSection'
 export default function Reading () {
   return (
     <div className='grid grid-cols-2'>
-      <TextSection />
+      <TextSection file={undefined} />
       <InteractionSection />
     </div>
   )
