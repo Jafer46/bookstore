@@ -3,6 +3,8 @@ import Layout from './Layout'
 import Reading from './pages/Reading'
 import Home from './pages/Home'
 import BookStore from './pages/BookStore'
+import AdminLayout from './pages/Admin/layout'
+import AdminHome from './pages/Admin/AdminHome'
 
 export const routes = createBrowserRouter([
   {
@@ -13,5 +15,10 @@ export const routes = createBrowserRouter([
       { path: 'reading', element: <Reading /> },
       { path: 'store', element: <BookStore /> }
     ]
+  },
+  {
+    path: '/admin',
+    element: <AdminLayout />,
+    children: [{ index: true, element: <AdminHome /> }]
   }
 ])
