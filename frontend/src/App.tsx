@@ -1,7 +1,9 @@
 import { RouterProvider } from 'react-router-dom'
 import { routes } from './routes'
+import { getAllRolls } from './api/rollApi'
 
 function App () {
+  // console.log(getAllRolls())
   return (
     // <>
     //   <div>

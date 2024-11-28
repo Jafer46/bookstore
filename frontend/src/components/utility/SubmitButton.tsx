@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import loadingIcon from '../assets/loading.png'
+import loadingIcon from '@/assets/loading.png'
 
 interface ButtonProps {
   isLoading: boolean

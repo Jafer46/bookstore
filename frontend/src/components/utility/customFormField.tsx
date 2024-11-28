@@ -31,6 +31,7 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select'
+import { Textarea } from '../ui/textarea'
 
 interface CustomProps {
   control: Control<any>
@@ -67,6 +68,28 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
           )}
           <FormControl>
             <Input
+              placeholder={placeHolder}
+              {...field}
+              className='shad-input border-0'
+            />
+          </FormControl>
+        </div>
+      )
+      break
+    case FormFieldType.TEXTAREA:
+      return (
+        <div className='flex rounded-md border border-dark-400 bg-white'>
+          {iconSrc && (
+            <img
+              src={iconSrc}
+              height={24}
+              width={24}
+              alt={iconAlt || 'icon'}
+              className='ml-2'
+            />
+          )}
+          <FormControl>
+            <Textarea
               placeholder={placeHolder}
               {...field}
               className='shad-input border-0'
@@ -178,6 +201,21 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             value={field.value}
             onChange={field.onChange}
             className='input-phone'
+          />
+        </FormControl>
+      )
+      break
+    case FormFieldType.File:
+      return (
+        <FormControl>
+          <Input
+            {...field}
+            type='file'
+            value={field.value}
+            accept='application/pdf'
+            onChange={event =>
+              field.onChange(event.target.files && event.target.files[0])
+            }
           />
         </FormControl>
       )

@@ -111,9 +111,9 @@ export const columns: ColumnDef<Role>[] = [
 ]
 
 export default function AdminHome () {
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, error } = useQuery<Role[], Error>({
     queryKey: ['roles'],
-    queryFn: async () => await getAllRolls()
+    queryFn: () => getAllRolls()
   })
   if (isLoading) {
     return <div>Loading...</div>
