@@ -31,35 +31,33 @@ export default function AddBook () {
   }
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2'>
+    <div className='w-full p-4'>
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className='flex-1 mb-3 space-y-2'
-        >
-          <section className='mb-12 space-y-1'>
+        <form onSubmit={form.handleSubmit(onSubmit)} className='mb-3 space-y-2'>
+          {/* <section className='mb-12 space-y-1'>
             <h1 className='text-xl font-bold'>Hi there 👋</h1>
             <p className='text-dark-700'>
               Add your data to the following form for sign up
             </p>
-          </section>
-          <CustomFormField
-            fieldType={FormFieldType.INPUT}
-            control={form.control}
-            name='name'
-            label='Book name'
-            placeHolder='ex. Some Book'
-            iconSrc=''
-          />
-          <CustomFormField
-            fieldType={FormFieldType.TEXTAREA}
-            control={form.control}
-            name='description'
-            label='Book Description'
-            placeHolder='ex. Some Book'
-            iconSrc=''
-          />
-          {/* <CustomFormField
+          </section> */}
+          <div className='grid grid-cols-1 gap-2'>
+            <CustomFormField
+              fieldType={FormFieldType.INPUT}
+              control={form.control}
+              name='name'
+              label='Book name'
+              placeHolder='ex. Some Book'
+              iconSrc=''
+            />
+            <CustomFormField
+              fieldType={FormFieldType.TEXTAREA}
+              control={form.control}
+              name='description'
+              label='Book Description'
+              placeHolder='ex. Some Book'
+              iconSrc=''
+            />
+            {/* <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='email'
@@ -67,22 +65,23 @@ export default function AddBook () {
             placeHolder='ex. 123@gamil.com'
             iconSrc=''
           /> */}
-          <CustomFormField
-            fieldType={FormFieldType.File}
-            control={form.control}
-            name='file'
-            label='Book File'
-            placeHolder='select book file'
-            iconSrc=''
-          />
-          <CustomFormField
-            fieldType={FormFieldType.File}
-            control={form.control}
-            name='cover'
-            label='Book Cover'
-            placeHolder='select book cover'
-            iconSrc=''
-          />
+            <CustomFormField
+              fieldType={FormFieldType.File}
+              control={form.control}
+              name='file'
+              label='Book File'
+              placeHolder='select book file'
+              iconSrc=''
+            />
+            <CustomFormField
+              fieldType={FormFieldType.File}
+              control={form.control}
+              name='cover'
+              label='Book Cover'
+              placeHolder='select book cover'
+              iconSrc=''
+            />
+          </div>
           <SubmitButton isLoading={isLoading}>Sign up</SubmitButton>
         </form>
       </Form>

@@ -6,7 +6,8 @@ import BookStore from './pages/BookStore'
 import AdminLayout from './pages/Admin/layout'
 import AdminHome from './pages/Admin/AdminHome'
 import AddAuther from './pages/Admin/AddAuther'
-import AddBook from './pages/Admin/AddBook'
+import AddBook from './pages/Admin/BookMangement/AddBook'
+import BookManager from './pages/Admin/BookMangement/BookManager'
 
 export const routes = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ export const routes = createBrowserRouter([
     children: [
       { index: true, element: <AdminHome /> },
       { path: 'addauther', element: <AddAuther /> },
-      { path: 'addbook', element: <AddBook /> }
+      { path: 'addbook', element: <BookManager /> }
     ]
   }
 ])
