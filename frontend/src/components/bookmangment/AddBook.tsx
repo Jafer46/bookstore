@@ -20,14 +20,9 @@ export default function AddBookForm () {
     }
   })
 
-  async function onSubmit ({
-    autherId,
-    categoryId,
-    createdAt,
-    descritpion,
-    name
-  }: z.infer<typeof BookformSchema>) {
+  async function onSubmit (values: z.infer<typeof BookformSchema>) {
     setIsLoading(true)
+    console.log(values)
   }
 
   return (
