@@ -7,6 +7,7 @@ import AdminHome from './pages/Admin/AdminHome'
 import AddAuther from './pages/Admin/AddAuther'
 import BookManager from './pages/Admin/BookManager'
 import AdminLayout from './pages/Admin/Layout'
+import Study from './pages/Study'
 
 export const routes = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ export const routes = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'reading', element: <Reading /> },
-      { path: 'store', element: <BookStore /> }
+      { path: 'store', element: <BookStore /> },
+      { path: 'study', element: <Study /> }
     ]
   },
   {

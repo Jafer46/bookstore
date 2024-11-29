@@ -11,7 +11,7 @@
 //todo: history or someother mechanism to get the last read
 //todo: add task completion and reading statistics on dashboard or home for users
 //todo: separate tasks by daily and and time line based
-//todo:
-//todo:
+//todo: change book grouop to course
+//todo: add page in course for testpapers and books and exame dates
 //todo:
 //todo:

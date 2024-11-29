@@ -14,6 +14,7 @@ export default function BookGroupGrid ({
           imgUrl={bookGroup?.imgUrl}
         />
       ))}
+      <div className='size-full flex items-center justify-center'>+ New</div>
     </div>
   )
 }
