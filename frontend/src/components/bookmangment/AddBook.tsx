@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-export default function AddBook () {
+export default function AddBookForm () {
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
   const form = useForm<z.infer<typeof BookformSchema>>({
     resolver: zodResolver(BookformSchema),

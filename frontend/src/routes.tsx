@@ -6,8 +6,8 @@ import BookStore from './pages/BookStore'
 import AdminLayout from './pages/Admin/layout'
 import AdminHome from './pages/Admin/AdminHome'
 import AddAuther from './pages/Admin/AddAuther'
-import AddBook from './pages/Admin/BookMangement/AddBook'
-import BookManager from './pages/Admin/BookMangement/BookManager'
+import AddBook from './components/bookmangment/AddBook'
+import BookManager from './pages/Admin/BookManager'
 
 export const routes = createBrowserRouter([
   {

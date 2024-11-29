@@ -23,7 +23,7 @@ import {
 } from '@/components/ui/drawer'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import AddBook from './AddBook'
+import AddBookForm from './AddBook'
 
 export function AddBookDialogue () {
   const [open, setOpen] = React.useState(false)
@@ -42,7 +42,7 @@ export function AddBookDialogue () {
               Add the values to create a new book
             </DialogDescription>
           </DialogHeader>
-          <AddBook />
+          <AddBookForm />
         </DialogContent>
       </Dialog>
     )
@@ -60,7 +60,7 @@ export function AddBookDialogue () {
             Add the values to create a new book
           </DrawerDescription>
         </DrawerHeader>
-        <AddBook />
+        <AddBookForm />
         <DrawerFooter className='pt-2'>
           <DrawerClose asChild>
             <Button variant='outline'>Cancel</Button>

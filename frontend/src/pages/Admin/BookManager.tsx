@@ -14,7 +14,7 @@ import { Book } from '@/constants/dataSchemas'
 import { useQuery } from '@tanstack/react-query'
 import { ColumnDef } from '@tanstack/react-table'
 import { ArrowUpDown, MoreHorizontal } from 'lucide-react'
-import { AddBookDialogue } from './AddBookDialogue'
+import { AddBookDialogue } from '../../components/bookmangment/AddBookDialogue'
 
 const columns: ColumnDef<Book>[] = [
   {
