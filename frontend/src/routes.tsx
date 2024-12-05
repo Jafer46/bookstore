@@ -8,6 +8,7 @@ import AddAuther from './pages/Admin/AddAuther'
 import BookManager from './pages/Admin/BookManager'
 import AdminLayout from './pages/Admin/Layout'
 import Study from './pages/Study'
+import SignIn from './pages/auth/SignIn'
 
 export const routes = createBrowserRouter([
   {
@@ -28,5 +29,9 @@ export const routes = createBrowserRouter([
       { path: 'addauther', element: <AddAuther /> },
       { path: 'addbook', element: <BookManager /> }
     ]
+  },
+  {
+    path: 'signin',
+    element: <SignIn/>
   }
 ])

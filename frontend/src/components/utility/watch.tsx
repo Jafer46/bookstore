@@ -1,16 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 export default function Watch () {
-  const [date, setDate] = useState(new Date())
+  const [date, setDate] = React.useState(new Date())
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date())
     }, 1000) // Update every second
     return () => clearInterval(timer)
   }, [])
 
-  const dayOptions = {
+  interface DateTimeFormatOptions {
+    localeMatcher?: "best fit" | "lookup" | undefined;
+    weekday?: "long" | "short" | "narrow" | undefined;
+    era?: "long" | "short" | "narrow" | undefined;
+    year?: "numeric" | "2-digit" | undefined;
+    month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined;
+    day?: "numeric" | "2-digit" | undefined;
+    hour?: "numeric" | "2-digit" | undefined;
+    minute?: "numeric" | "2-digit" | undefined;
+    second?: "numeric" | "2-digit" | undefined;
+    timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined;
+    formatMatcher?: "best fit" | "basic" | undefined;
+    hour12?: boolean | undefined;
+    timeZone?: string | undefined;
+  }
+
+  const dayOptions: DateTimeFormatOptions = {
     weekday: 'long',
     year: 'numeric',
     month: 'numeric',
@@ -34,15 +50,15 @@ export default function Watch () {
       </div>
       {/* Hour Hand */}
       <div
-        className='absolute h-24 w-[4px] bg-red-500 transition-transform duration-300'
+        className='absolute h-24 w-[4px] bg-red-500 transition-transform duration-300 bottom-[118px]'
         style={{
-          transform: `rotate(${hourRotation}deg)`,
-          transformOrigin: 'bottom center'
+          transform: `rotate(${secondRotation}deg)`,
+          transformOrigin: 'bottom center',
         }}
       />
       {/* Minute Hand */}
       <div
-        className='absolute h-20 w-[3px] bg-white transition-transform duration-300'
+        className='absolute h-20 w-[3px] bg-white transition-transform duration-300 bottom-[118px]'
         style={{
           transform: `rotate(${minuteRotation}deg)`,
           transformOrigin: 'bottom center'
@@ -50,9 +66,9 @@ export default function Watch () {
       />
       {/* Second Hand */}
       <div
-        className='absolute h-16 w-[2px] bg-white transition-transform duration-300'
+        className='absolute h-16 w-[2px] bg-white transition-transform duration-300 bottom-[118px]'
         style={{
-          transform: `rotate(${secondRotation}deg)`,
+          transform: `rotate(${hourRotation}deg)`,
           transformOrigin: 'bottom center'
         }}
       />

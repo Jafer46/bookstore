@@ -16,3 +16,15 @@ export const AutherformSchema = z.object({
     message: 'auther name must be greater than 2 charcters'
   })
 })
+
+export const LoginSchema = z.object({
+  username: z.string().min(3, {
+    message: 'auther name must be greater than 2 charcters'
+  }),
+  email: z.string().email(),
+  password: z.string().min(8,{
+    message: 'password must be at least 8 characters'
+  }).max(16, {
+    message: 'password must be at less than 16 characters'
+  })
+})
