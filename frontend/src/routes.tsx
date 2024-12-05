@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './Layout'
-import Reading from './pages/Reading'
+import Reading from './pages/reading'
 import Home from './pages/Home'
 import BookStore from './pages/BookStore'
 import AdminHome from './pages/Admin/AdminHome'
